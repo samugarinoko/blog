@@ -1,0 +1,92 @@
+<p>作成日：2024年10月30日<br>
+  最新更新日：2024年10月30日</p>
+  <p>HTMLって書くのめんどくさいし調べるのもめんどくさいなーって思ってませんか？そんな時にHTMLジェネレーターを使います。<small>ここのブログにまた追加するかも</small></p>
+  <h3>1.カウントダウン生成</h3>
+  <p>すごかったです。↓ちなみに作ってみました↓</p>
+  <div id="counter_wrap"><div id="counter"></div><div><script>let target  = new Date(2024, 9, 31, 0, 0, 0);const countdown = ()=>{const targetObj = document.getElementById("counter");const now = new Date();const differ = target.getTime() - now.getTime();if(differ < 0){targetObj.innerHTML = "終了しちゃった★";return false;};const myDay = Math.floor(differ / 1000 / 60 / 60 / 24);const myHour = Math.floor(differ / 1000 / 60 / 60 % 24);const myMin = Math.floor(differ / 1000 / 60 % 60);const mySec = Math.floor(differ / 1000 % 60);const myMsec= Math.floor(differ);targetObj.innerHTML = "ハロウィーンまで" + "<br>" + String(myDay).padStart(2, '0') + '日' + String(myHour).padStart(2, '0') + '時間' + String(myMin).padStart(2, '0') + '分' + String(mySec).padStart(2, '0') +'秒'+"です。";if(differ < 0){clearInterval(countdown);};};setInterval(countdown, 1);</script></div><style>#counter{display:block; max-width:100%; margin:0 auto; width:680px; padding:20px 15px 20px; color:#FF0000; background:#FFF800; text-align:center; font-size:20px; line-height:1.5em; font-weight:bold;}</style></div><br>
+  <a href="https://blogtool.work/countdown/#:~:text=%E8%A8%AD%E5%AE%9A">サイト</a>
+  <h3>2.SVG作成</h3>
+  <p>便利すぎ</p>
+  <svg xmlns="http://www.w3.org/2000/svg"
+     width="160" height="160" viewBox="-5, -5, 160, 160">
+
+  <path d="M75 0 L55 50 L0 50 L40 90 L15 150 L75 115 L135 150 L110 90 L150 50 L95 50 Z"
+        fill="#ffff99"
+        stroke="#ff4d4d" stroke-width="5">
+  </path>
+
+</svg>
+<a href="https://webparts.cman.jp/figure/svg_polygon/">サイト</a>
+<h3>4.ボタン生成</h3>
+<style>
+  .btn{
+    width:500px;
+    height:80px;
+    line-height:80px;
+}
+.btn a{
+    display:block;
+    width:100%;
+    height:100%;
+    text-decoration: none;
+    background:#0099FF;
+    text-align:center;
+    color:#FFFFFF;
+    font-size:30px;
+    font-weight:bold;
+    border-radius:10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    box-shadow:5px 5px 0px 0px #DEDEDE ;
+}
+.btn a:hover{
+    background:#0099FF;
+    color:#FFFC00;
+    margin-left:5px;
+    margin-top:5px;
+    box-shadow:none;
+}
+
+</style>
+<p>まあデザインいいからおｋ　<small>うまく使えばリンクが設定できるね</small></p>
+<div class='btn'>
+    <a href=''>ボタン</a>
+</div>
+<a href="https://generator.web-alpha.info/btn/">サイト</a>
+<h3>5.吹き出し</h3>
+<style>
+  .arrow_box{
+    position:relative;
+    width:500px;
+    height:80px;
+    background:#0099FF;
+    padding:10px;
+    text-align:center;
+    color:#FFFFFF;
+    font-size:30px;
+    font-weight:bold;
+    border-radius:10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+}
+.arrow_box:after{
+    border: solid transparent;
+    content:'';
+    height:0;
+    width:0;
+    pointer-events:none;
+    position:absolute;
+    border-color: rgba(0, 153, 255, 0);
+    border-top-width:10px;
+    border-bottom-width:10px;
+    border-left-width:10px;
+    border-right-width:10px;
+    margin-left: -10px;
+    border-top-color:#0099FF;
+    top:100%;
+    left:50%;
+}
+</style>
+<p>用途不明</p>
+<div class='arrow_box'>吹き出し</div>
+<a href="https://generator.web-alpha.info/fukidashi/">サイト</a>
